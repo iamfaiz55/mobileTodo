@@ -7,8 +7,9 @@ exports.getAllTodos = asyncHandler(async(req, res)=> {
 })
 
 exports.addTodo = asyncHandler(async(req, res)=> {
-     await Todo.creaet(req.body)
-    res.json({message:"Todo create Success",})
+    
+     await Todo.create(req.body)
+      res.status(201).json({message:"Todo create Success"})
 })
 
 exports.updateTodo = asyncHandler(async(req, res)=> {
